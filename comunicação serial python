@@ -1,0 +1,17 @@
+
+import serial
+import urllib3''
+
+porta = "COM3"
+velocidade = 9600
+
+conexao = serial.Serial(porta, velocidade)
+opcao = '1'
+
+while opcao != "2":
+    opcao= input("digite a parada: ")
+    if opcao !="2":
+        conexao.write((opcao).encode())
+
+
+conexao.close()
